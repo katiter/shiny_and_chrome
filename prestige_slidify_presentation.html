@@ -45,7 +45,7 @@
     <h2>The Census Data</h2>
   </hgroup>
   <article data-timings="">
-    <p>With this simple Shiny application, we let the user explore the Canadian census data for occupations, available in the <code>car</code> package.</p>
+    <p>With this simple Shiny application (<a href="http://katiter.shinyapps.io/project_prestige">http://katiter.shinyapps.io/project_prestige</a>), we let the user explore the Canadian census data for occupations, available in the <code>car</code> package.</p>
 
 <pre><code class="r">Prestige &lt;- car::Prestige
 head(Prestige)
@@ -69,11 +69,13 @@ head(Prestige)
     <h2>Variables of Interest</h2>
   </hgroup>
   <article data-timings="">
-    <p>The user can explore how these factors correlate wht the perceived respectability of an occupation:</p>
+    <p>The user can explore how these factors correlate with the perceived respectability of an occupation:</p>
 
-<p>Gender
- Education
- Salary</p>
+<ul>
+<li>Gender</li>
+<li>Education</li>
+<li>Salary</li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -86,16 +88,7 @@ head(Prestige)
   <article data-timings="">
     <p>For example, how does occupational prestige correlate with years of education? </p>
 
-<pre><code>## Loading required package: ggplot2
-</code></pre>
-
 <p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"> </p>
-
-<h2>Another Sample Plot</h2>
-
-<p>In the Shiny app, you can also explore by the percentage of women or by job type.</p>
-
-<p><img src="assets/fig/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3"> </p>
 
   </article>
   <!-- Presenter Notes -->
@@ -103,10 +96,23 @@ head(Prestige)
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
+    <h2>Another Sample Plot</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>In the Shiny app, you can also explore by the percentage of women or by job type.</p>
+
+<p><img src="assets/fig/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
     <h2>A Simple Model</h2>
   </hgroup>
   <article data-timings="">
-    <p>After the exploratory analysis, we can also build a simple model to describe occupational prestige.</p>
+    <p>After exploring the data through the app, we can build a simple model to describe occupational prestige.</p>
 
 <pre><code>## 
 ## Call:
@@ -129,6 +135,16 @@ head(Prestige)
 ## F-statistic: 195.6 on 2 and 99 DF,  p-value: &lt; 2.2e-16
 </code></pre>
 
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Thanks :)</h2>
+  </hgroup>
+  <article data-timings="">
+    
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -157,8 +173,20 @@ head(Prestige)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='A Simple Model'>
+        data-slide=4 title='Another Sample Plot'>
          4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='A Simple Model'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Thanks :)'>
+         6
       </a>
     </li>
   </ul>

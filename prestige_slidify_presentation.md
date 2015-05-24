@@ -12,7 +12,7 @@ mode        : selfcontained # {standalone, draft}
 ## The Census Data
 
 
-With this simple Shiny application, we let the user explore the Canadian census data for occupations, available in the `car` package.
+With this simple Shiny application (http://katiter.shinyapps.io/project_prestige), we let the user explore the Canadian census data for occupations, available in the `car` package.
 
 
 ```r
@@ -34,12 +34,11 @@ head(Prestige)
 ---
 ## Variables of Interest
 
+The user can explore how these factors correlate with the perceived respectability of an occupation:
 
-The user can explore how these factors correlate wht the perceived respectability of an occupation:
-
- Gender
- Education
- Salary
+- Gender
+- Education
+- Salary
 
 ---
 
@@ -47,12 +46,9 @@ The user can explore how these factors correlate wht the perceived respectabilit
 
 For example, how does occupational prestige correlate with years of education? 
 
-
-```
-## Loading required package: ggplot2
-```
-
 ![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2-1.png) 
+
+---
 
 ## Another Sample Plot
 In the Shiny app, you can also explore by the percentage of women or by job type.
@@ -65,7 +61,7 @@ In the Shiny app, you can also explore by the percentage of women or by job type
 
 ## A Simple Model
 
-After the exploratory analysis, we can also build a simple model to describe occupational prestige.
+After exploring the data through the app, we can build a simple model to describe occupational prestige.
 
 
 ```
@@ -90,6 +86,8 @@ After the exploratory analysis, we can also build a simple model to describe occ
 ## F-statistic: 195.6 on 2 and 99 DF,  p-value: < 2.2e-16
 ```
 
+--- 
 
+## Thanks :)
 
 

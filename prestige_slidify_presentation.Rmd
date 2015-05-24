@@ -12,7 +12,7 @@ mode        : selfcontained # {standalone, draft}
 ## The Census Data
 
 
-With this simple Shiny application, we let the user explore the Canadian census data for occupations, available in the `car` package.
+With this simple Shiny application (http://katiter.shinyapps.io/project_prestige), we let the user explore the Canadian census data for occupations, available in the `car` package.
 
 ```{r}
 Prestige <- car::Prestige
@@ -23,12 +23,11 @@ head(Prestige)
 ---
 ## Variables of Interest
 
+The user can explore how these factors correlate with the perceived respectability of an occupation:
 
-The user can explore how these factors correlate wht the perceived respectability of an occupation:
-
- Gender
- Education
- Salary
+- Gender
+- Education
+- Salary
 
 ---
 
@@ -36,16 +35,18 @@ The user can explore how these factors correlate wht the perceived respectabilit
 
 For example, how does occupational prestige correlate with years of education? 
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, fig.height=4, fig.width=6}
 require(ggplot2)
 ggplot(Prestige, aes(education, prestige)) + geom_point() + theme_bw()
 ```
+
+---
 
 ## Another Sample Plot
 In the Shiny app, you can also explore by the percentage of women or by job type.
 
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, fig.height=4, fig.width=6}
 require(ggplot2)
 ggplot(Prestige, aes(education, prestige)) + geom_point(aes(size=women, color=type)) + theme_bw()
 ```
@@ -55,13 +56,15 @@ ggplot(Prestige, aes(education, prestige)) + geom_point(aes(size=women, color=ty
 
 ## A Simple Model
 
-After the exploratory analysis, we can also build a simple model to describe occupational prestige.
+After exploring the data through the app, we can build a simple model to describe occupational prestige.
 
 ```{r, echo=FALSE}
 model <- lm(prestige ~ education + income, data=Prestige)
 summary(model)
 ```
 
+--- 
 
+## Thanks :)
 
 
