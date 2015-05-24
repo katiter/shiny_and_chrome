@@ -1,4 +1,4 @@
-# shiny_and_chrome
+# App: Exploring job prestige
 
 
 With this simple Shiny application at http://katiter.shinyapps.io/project_prestige, we let the user explore the Canadian census data for occupations, available in the `car` package.
