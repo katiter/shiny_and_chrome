@@ -1,0 +1,58 @@
+---
+title       : What makes a job prestigious? 
+subtitle    : Education? Income? Gender parity?
+author      : Katiter
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+---
+
+## The Census Data
+
+
+With this simple Shiny application, we let the user explore the Canadian census data for occupations, available in the `car` package.
+
+```{r}
+Prestige <- car::Prestige
+head(Prestige)
+```
+
+ 
+
+---
+## Variables of Interest
+
+
+The user can explore how these factors correlate wht the perceived respectability of an occupation:
+
+- Gender
+- Education
+- Salary
+
+---
+
+## A Sample Plot
+
+For example, how does occupational prestige correlate with years of education? Or with the percentage of women?
+
+```{r, echo=FALSE}
+require(ggplot2)
+ggplot(Prestige, aes(education, prestige)) + geom_point(aes(size=women)) + theme_bw()
+```
+
+---
+
+## A Simple Model
+
+After the exploratory analysis, we can also build a simple model to describe occupational prestige.
+
+```{r, echo=FALSE}
+model <- lm(prestige ~ education + income, data=Prestige)
+summary(model)
+```
+
+
+
+
