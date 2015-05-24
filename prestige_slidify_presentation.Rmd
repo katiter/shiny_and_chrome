@@ -18,7 +18,6 @@ With this simple Shiny application, we let the user explore the Canadian census 
 Prestige <- car::Prestige
 head(Prestige)
 ```
-
  
 
 ---
@@ -35,12 +34,22 @@ The user can explore how these factors correlate wht the perceived respectabilit
 
 ## A Sample Plot
 
-For example, how does occupational prestige correlate with years of education? Or with the percentage of women?
+For example, how does occupational prestige correlate with years of education? 
 
 ```{r, echo=FALSE}
 require(ggplot2)
-ggplot(Prestige, aes(education, prestige)) + geom_point(aes(size=women)) + theme_bw()
+ggplot(Prestige, aes(education, prestige)) + geom_point() + theme_bw()
 ```
+
+## Another Sample Plot
+In the Shiny app, you can also explore by the percentage of women or by job type.
+
+
+```{r, echo=FALSE}
+require(ggplot2)
+ggplot(Prestige, aes(education, prestige)) + geom_point(aes(size=women, color=type)) + theme_bw()
+```
+
 
 ---
 
