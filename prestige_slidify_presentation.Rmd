@@ -26,9 +26,9 @@ head(Prestige)
 
 The user can explore how these factors correlate wht the perceived respectability of an occupation:
 
-- Gender
-- Education
-- Salary
+ Gender
+ Education
+ Salary
 
 ---
 
