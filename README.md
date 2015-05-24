@@ -9,3 +9,6 @@ The app allows the user to tweak a scatter plot in order to explore how these fa
 - Education
 - Salary
 
+Learn more from the slidify presentation at http://rpubs.com/katiter/prestige
+
+Have a great day!
